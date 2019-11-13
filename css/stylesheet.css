@@ -37,3 +37,11 @@ h4{
 	margin: auto;
 }
 
+.btn-map{
+	margin-bottom: 15px;
+}
+/* Maps styling */
+#map{
+	height: 650px;
+	width: 100%;
+}
