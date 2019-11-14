@@ -6,8 +6,8 @@ var brewries = [
 		name : 'Panhead',
 		longAndLat : {lat:-41.131073, lng:175.067505},
 		openCard : '<div id="breweryInfo" class="text-primary"><div class="brewery-header"><h2>Panhead Brewery</h2></div><div class="brewery-iWindow-body row"><div class="col-6"><h4>Open Days</h3><ul class="list-open-hours"><li>Tue</li><li>Wed</li><li>Thu</li><li>Fri</li><li>Sat</li><li>Sun</li></ul></div><div class="col-6"><h4>Opening Hours</h3><ul class="list-open-hours"><li>3pm - 9pm</li><li>11am - 9pm</li><li>11am - 9pm</li><li>11am - 9pm</li><li>11am - 9pm</li><li>11am - 9pm</li></ul></div></div></div>',
-		openDays : ['Tue' , 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
-		// openHours : ['3pm - 9pm', '11am - 9pm', '11am - 9pm', '11am - 9pm', '11am - 9pm', '11am - 9pm']
+		openDays : ['Tue' , 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+		openHours : ['3pm - 9pm', '11am - 9pm', '11am - 9pm', '11am - 9pm', '11am - 9pm', '11am - 9pm']
 	},
 	{
 		id : 102,
@@ -15,7 +15,7 @@ var brewries = [
 		longAndLat : {lat:-41.130121, lng: 175.068525},
 		openCard : '<div id="breweryInfo" class="text-primary"><div class="brewery-header"><h2>Boneface Brewery</h2></div><div class="brewery-iWindow-body row"><div class="col-6"><h4>Open Days</h3><ul class="list-open-hours"><li>Tue</li><li>Wed</li><li>Thu</li><li>Fri</li><li>Sat</li><li>Sun</li></ul></div><div class="col-6"><h4>Opening Hours</h3><ul class="list-open-hours"><li>3pm - 9pm</li><li>11am - 9pm</li><li>11am - 9pm</li><li>11am - 9pm</li><li>11am - 9pm</li><li>11am - 9pm</li></ul></div></div></div>',
 		openDays : ['Tue' , 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-		// openHours : ['3pm - 9pm', '11am - 9pm', '11am - 9pm', '11am - 9pm', '11am - 9pm', '11am - 9pm']
+		openHours : ['3pm - 9pm', '11am - 9pm', '11am - 9pm', '11am - 9pm', '11am - 9pm', '11am - 9pm']
 	},
 	{
 		id : 103,
@@ -23,7 +23,7 @@ var brewries = [
 		longAndLat : {lat: -41.129686, lng: 175.072361},
 		openCard : '<div id="breweryInfo" class="text-primary"><div class="brewery-header"><h2>Kereru Brewery</h2></div><div class="brewery-iWindow-body row"><div class="col-6"><h4>Open Days</h3><ul class="list-open-hours"><li>Tue</li><li>Wed</li><li>Thu</li><li>Fri</li><li>Sat</li></ul></div><div class="col-6"><h4>Opening Hours</h3><ul class="list-open-hours"><li>9am - 4pm</li><li>9am - 4pm</li><li>9am - 4pm</li><li>10am - 5pm</li><li>10am - 5pm</li></ul></div></div></div>',
 		openDays : ['Tue' , 'Wed', 'Thu', 'Fri', 'Sat'],
-		// openHours : ['9am - 4pm', '9am - 4pm', '9am - 4pm', '10am - 5pm', '10am - 5pm']
+		openHours : ['9am - 4pm', '9am - 4pm', '9am - 4pm', '10am - 5pm', '10am - 5pm']
 	},
 	{
 		id : 104,
@@ -31,7 +31,7 @@ var brewries = [
 		longAndLat : {lat: -41.295940, lng: 174.773553},
 		openCard : '<div id="breweryInfo" class="text-primary"><div class="brewery-header"><h2>Heyday Beer Co Brewery</h2></div><div class="brewery-iWindow-body row"><div class="col-6"><h4>Open Days</h3><ul class="list-open-hours"><li>Mon</li><li>Tue</li><li>Wed</li><li>Thu</li><li>Fri</li><li>Sat</li><li>Sun</li></ul></div><div class="col-6"><h4>Opening Hours</h3><ul class="list-open-hours"><li>3pm - 11pm</li><li>3pm - 11pm</li><li>11am - 10pm</li><li>11am - 10pm</li><li>11am - 12am</li><li>11am - 12am</li><li>11am - 9pm</li></ul></div></div></div>',
 		openDays : ['Mon', 'Tue' , 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-		// openHours : ['3pm - 11pm', '3pm - 11pm', '11am - 10pm', '11am - 10pm', '11am - 12am', '11am - 12am', '11am - 9pm']
+		openHours : ['3pm - 11pm', '3pm - 11pm', '11am - 10pm', '11am - 10pm', '11am - 12am', '11am - 12am', '11am - 9pm']
 	},
 	{
 		id : 105,
@@ -39,7 +39,7 @@ var brewries = [
 		longAndLat : {lat: -41.294491, lng: 174.767862},
 		openCard : '<div id="breweryInfo" class="text-primary"><div class="brewery-header"><h2>Garage Project Cellar Door Brewery</h2></div><div class="brewery-iWindow-body row"><div class="col-6"><h4>Open Days</h3><ul class="list-open-hours"><li>Mon</li><li>Tue</li><li>Wed</li><li>Thu</li><li>Fri</li><li>Sat</li><li>Sun</li></ul></div><div class="col-6"><h4>Opening Hours</h3><ul class="list-open-hours"><li>12pm - 7pm</li><li>12pm - 8.30pm</li><li>12pm - 8.30pm</li><li>12pm - 8.30pm</li><li>10am - 9.30pm</li><li>10am - 9.30pm</li><li>12pm - 7pm</li></ul></div></div></div>',
 		openDays : ['Mon', 'Tue' , 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-		// openHours : ['12pm - 7pm', '12pm - 8.30pm', '12pm - 8.30pm', '12pm - 8.30pm', '10am - 9.30pm', '10am - 9.30pm', '12pm - 7pm']
+		openHours : ['12pm - 7pm', '12pm - 8.30pm', '12pm - 8.30pm', '12pm - 8.30pm', '10am - 9.30pm', '10am - 9.30pm', '12pm - 7pm']
 	},
 	{
 		id : 106,
@@ -47,7 +47,7 @@ var brewries = [
 		longAndLat : {lat: -41.326756, lng: 174.799773},
 		openCard : '<div id="breweryInfo" class="text-primary"><div class="brewery-header"><h2>Parrotdog Brewery</h2></div><div class="brewery-iWindow-body row"><div class="col-6"><h4>Open Days</h3><ul class="list-open-hours"><li>Wed</li><li>Thu</li><li>Fri</li><li>Sat</li><li>Sun</li></ul></div><div class="col-6"><h4>Opening Hours</h3><ul class="list-open-hours"><li>3pm - 7pm</li><li>1pm - 7pm</li><li>11am - 8pm</li><li>11am - 8pm</li><li>12pm - 6pm</li></ul></div></div></div>',
 		openDays : ['Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-		// openHours : ['3pm - 7pm', '1pm - 7pm', '11am - 8pm', '11am - 8pm', '12pm - 6pm']
+		openHours : ['3pm - 7pm', '1pm - 7pm', '11am - 8pm', '11am - 8pm', '12pm - 6pm']
 	},
 	{
 		id : 107,
@@ -55,7 +55,7 @@ var brewries = [
 		longAndLat : {lat: -41.225268, lng: 174.873098},
 		openCard : '<div id="breweryInfo" class="text-primary"><div class="brewery-header"><h2>Baylands Brewery</h2></div><div class="brewery-iWindow-body row"><div class="col-6"><h4>Open Days</h3><ul class="list-open-hours"><li>Tue</li><li>Wed</li><li>Thu</li><li>Fri</li><li>Sat</li></ul></div><div class="col-6"><h4>Opening Hours</h3><ul class="list-open-hours"><li>9am - 5.30pm</li><li>9am - 5.30pm</li><li>9am - 5.30pm</li><li>9am - 5.30pm</li><li>11am - 5.30pm</li></ul></div></div></div>',
 		openDays : ['Tue' , 'Wed', 'Thu', 'Fri', 'Sat'],
-		// openHours : ['9am - 5.30pm', '9am - 5.30pm', '9am - 5.30pm', '9am - 5.30pm', '11am - 5.30pm']
+		openHours : ['9am - 5.30pm', '9am - 5.30pm', '9am - 5.30pm', '9am - 5.30pm', '11am - 5.30pm']
 	},
 	{
 		id : 108,
@@ -63,7 +63,7 @@ var brewries = [
 		longAndLat : {lat: -41.309406, lng: 174.821354},
 		openCard : '<div id="breweryInfo" class="text-primary"><div class="brewery-header"><h2>Double Vision Brewing Brewery</h2></div><div class="brewery-iWindow-body row"><div class="col-6"><h4>Open Days</h3><ul class="list-open-hours"><li>Thu</li><li>Fri</li><li>Sat</li><li>Sun</li></ul></div><div class="col-6"><h4>Opening Hours</h3><ul class="list-open-hours"><li>3pm - 10.30pm</li><li>3pm - 11.30pm</li><li>12pm - 11.30pm</li><li>12pm - 9.00pm</li></ul></div></div></div>',
 		openDays : ['Thu', 'Fri', 'Sat', 'Sun'],
-		// openHours : ['3pm - 10.30pm', '3pm - 11.30pm', '12pm - 11.30pm', '12pm - 9.00pm'] 
+		openHours : ['3pm - 10.30pm', '3pm - 11.30pm', '12pm - 11.30pm', '12pm - 9.00pm'] 
 	},
 	{
 		id : 109,
@@ -71,7 +71,7 @@ var brewries = [
 		longAndLat : {lat: -41.294065, lng: 174.777728},
 		openCard : '<div id="breweryInfo" class="text-primary"><div class="brewery-header"><h2>Whistling Sisters Beer Co Brewery</h2></div><div class="brewery-iWindow-body row"><div class="col-6"><h4>Open Days</h3><ul class="list-open-hours"><li>Tue</li><li>Wed</li><li>Thu</li><li>Fri</li><li>Sat</li><li>Sun</li></ul></div><div class="col-6"><h4>Opening Hours</h3><ul class="list-open-hours"><li>3pm - 12am</li><li>3pm - 12.00am</li><li>13pm - 12am</li><li>11:30am – 1am</li><li>10am - 1am</li><li>10am - 12am</li></ul></div></div></div>',
 		openDays : ['Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-		// openHours : ['3pm - 12am', '3pm - 12.00am', '3pm - 12am', '11:30am – 1am', '10am - 1am', '10am - 12am'] 
+		openHours : ['3pm - 12am', '3pm - 12.00am', '3pm - 12am', '11:30am – 1am', '10am - 1am', '10am - 12am'] 
 	},
 	{
 		id : 110,
@@ -79,7 +79,7 @@ var brewries = [
 		longAndLat : {lat: -41.289235, lng: 174.775628},
 		openCard : '<div id="breweryInfo" class="text-primary"><div class="brewery-header"><h2>Fork and Brewer Brewery</h2></div><div class="brewery-iWindow-body row"><div class="col-6"><h4>Open Days</h3><ul class="list-open-hours"><li>Mon</li><li>Tue</li><li>Wed</li><li>Thu</li><li>Fri</li><li>Sat</li><li>Sun</li></ul></div><div class="col-6"><h4>Opening Hours</h3><ul class="list-open-hours"><li>11.30am - 11pm</li><li>11.30am - 12am</li><li>11.30am - 12am</li><li>11.30am - 12am</li><li>11.30am - 10pm</li><li>11.30am - 12am</li><li>11.30am - 10pm</li></ul></div></div></div>',
 		openDays : ['Mon', 'Tue' , 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-		// openHours : ['11.30am - 11pm', '11.30am - 12am', '11.30am - 12am', '11.30am - 12am', '11.30am - 10pm', '11.30am - 12am', '11.30am - 10pm'] 
+		openHours : ['11.30am - 11pm', '11.30am - 12am', '11.30am - 12am', '11.30am - 12am', '11.30am - 10pm', '11.30am - 12am', '11.30am - 10pm'] 
 	}
 ];
 
