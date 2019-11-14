@@ -61,7 +61,7 @@ var brewries = [
 		id : 108,
 		name : 'Double Vision Brewing',
 		longAndLat : {lat: -41.309406, lng: 174.821354},
-		openCard : '<div id="breweryInfo" class="text-primary"><div class="brewery-header"><h2>Garage Project Cellar Door Brewery</h2></div><div class="brewery-iWindow-body row"><div class="col-6"><h4>Open Days</h3><ul class="list-open-hours"><li>Thu</li><li>Fri</li><li>Sat</li><li>Sun</li></ul></div><div class="col-6"><h4>Opening Hours</h3><ul class="list-open-hours"><li>3pm - 10.30pm</li><li>3pm - 11.30pm</li><li>12pm - 11.30pm</li><li>12pm - 9.00pm</li></ul></div></div></div>',
+		openCard : '<div id="breweryInfo" class="text-primary"><div class="brewery-header"><h2>Double Vision Brewing Brewery</h2></div><div class="brewery-iWindow-body row"><div class="col-6"><h4>Open Days</h3><ul class="list-open-hours"><li>Thu</li><li>Fri</li><li>Sat</li><li>Sun</li></ul></div><div class="col-6"><h4>Opening Hours</h3><ul class="list-open-hours"><li>3pm - 10.30pm</li><li>3pm - 11.30pm</li><li>12pm - 11.30pm</li><li>12pm - 9.00pm</li></ul></div></div></div>',
 		openDays : ['Thu', 'Fri', 'Sat', 'Sun'],
 		// openHours : ['3pm - 10.30pm', '3pm - 11.30pm', '12pm - 11.30pm', '12pm - 9.00pm'] 
 	},
@@ -69,7 +69,7 @@ var brewries = [
 		id : 109,
 		name : 'Whistling Sisters Beer Co',
 		longAndLat : {lat: -41.294065, lng: 174.777728},
-		openCard : '<div id="breweryInfo" class="text-primary"><div class="brewery-header"><h2>Garage Project Cellar Door Brewery</h2></div><div class="brewery-iWindow-body row"><div class="col-6"><h4>Open Days</h3><ul class="list-open-hours"><li>Tue</li><li>Wed</li><li>Thu</li><li>Fri</li><li>Sat</li><li>Sun</li></ul></div><div class="col-6"><h4>Opening Hours</h3><ul class="list-open-hours"><li>3pm - 12am</li><li>3pm - 12.00am</li><li>13pm - 12am</li><li>11:30am – 1am</li><li>10am - 1am</li><li>10am - 12am</li></ul></div></div></div>',
+		openCard : '<div id="breweryInfo" class="text-primary"><div class="brewery-header"><h2>Whistling Sisters Beer Co Brewery</h2></div><div class="brewery-iWindow-body row"><div class="col-6"><h4>Open Days</h3><ul class="list-open-hours"><li>Tue</li><li>Wed</li><li>Thu</li><li>Fri</li><li>Sat</li><li>Sun</li></ul></div><div class="col-6"><h4>Opening Hours</h3><ul class="list-open-hours"><li>3pm - 12am</li><li>3pm - 12.00am</li><li>13pm - 12am</li><li>11:30am – 1am</li><li>10am - 1am</li><li>10am - 12am</li></ul></div></div></div>',
 		openDays : ['Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
 		// openHours : ['3pm - 12am', '3pm - 12.00am', '3pm - 12am', '11:30am – 1am', '10am - 1am', '10am - 12am'] 
 	},
@@ -77,7 +77,7 @@ var brewries = [
 		id : 110,
 		name : 'Fork and Brewer',
 		longAndLat : {lat: -41.289235, lng: 174.775628},
-		openCard : '<div id="breweryInfo" class="text-primary"><div class="brewery-header"><h2>Garage Project Cellar Door Brewery</h2></div><div class="brewery-iWindow-body row"><div class="col-6"><h4>Open Days</h3><ul class="list-open-hours"><li>Mon</li><li>Tue</li><li>Wed</li><li>Thu</li><li>Fri</li><li>Sat</li><li>Sun</li></ul></div><div class="col-6"><h4>Opening Hours</h3><ul class="list-open-hours"><li>11.30am - 11pm</li><li>11.30am - 12am</li><li>11.30am - 12am</li><li>11.30am - 12am</li><li>11.30am - 10pm</li><li>11.30am - 12am</li><li>11.30am - 10pm</li></ul></div></div></div>',
+		openCard : '<div id="breweryInfo" class="text-primary"><div class="brewery-header"><h2>Fork and Brewer Brewery</h2></div><div class="brewery-iWindow-body row"><div class="col-6"><h4>Open Days</h3><ul class="list-open-hours"><li>Mon</li><li>Tue</li><li>Wed</li><li>Thu</li><li>Fri</li><li>Sat</li><li>Sun</li></ul></div><div class="col-6"><h4>Opening Hours</h3><ul class="list-open-hours"><li>11.30am - 11pm</li><li>11.30am - 12am</li><li>11.30am - 12am</li><li>11.30am - 12am</li><li>11.30am - 10pm</li><li>11.30am - 12am</li><li>11.30am - 10pm</li></ul></div></div></div>',
 		openDays : ['Mon', 'Tue' , 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
 		// openHours : ['11.30am - 11pm', '11.30am - 12am', '11.30am - 12am', '11.30am - 12am', '11.30am - 10pm', '11.30am - 12am', '11.30am - 10pm'] 
 	}
@@ -118,10 +118,7 @@ script.src = 'https://maps.googleapis.com/maps/api/js?key=' + myKey[0].key + '&c
 // Appending to the body of index.html
 document.getElementsByTagName('body')[0].appendChild(script); 
 
-
-
-
-
+// Creating map
 var breweryMap;
 // Function that places the map and it's markers
 function initMap() {
@@ -160,6 +157,7 @@ function initMap() {
 			});
 			// On click, diplays the selected card
 			marker.addListener('click', function(){
+				// Works out which map and marker was clicked
 				infoWindow.open(map, marker)
 			});
 		}

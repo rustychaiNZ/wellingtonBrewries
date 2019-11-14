@@ -45,13 +45,16 @@ h4{
 	padding-left: 10px;
 }
 #map{
-	height: 650px;
+	height: 632px;
 	width: 100%;
 	background-color: grey;
 }
 #breweryInfo{
 	width: 350px;
 	height: auto;
+}
+#breweryInfo h2{
+	font-size: 1.75em;
 }
 #breweryInfo h4{
 	font-size: 1.2em;
