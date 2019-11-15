@@ -161,8 +161,10 @@ function addMarkers(props){
 		title: props.name,
 		// Adds the card to be displayed when an icon is clicked
 		content: props.openCard,
-		area : props.area
+		area : props.area,
+		openDays: [props.openDays]
 	});
+	console.log(marker.openDays);
 	// Pushes all markers to an array
 	allMarkers.push(marker);
 	// Checks to see if there is a card that can be displayed
@@ -184,16 +186,16 @@ function addMarkers(props){
 */
 
 // Function that calls on the variables created in the filter by area function
-function clearMarkers(filterByArea){
+function clearMarkers(filterByArea, filterByDays){
 	// Loops through all of the markers 
 	for(var i=0; i < allMarkers.length; i++){
 		// Allows all of the markers to be displayed if filter is reset
-		if(filterByArea == 'all'){
+		if((filterByArea == 'all') && (filterByDays == 'all')){
 			// Reveals all markers on map
 			allMarkers[i].setMap(breweryMap);
 		}
 		// If the filtered area isn't selected, hides the markers in those areas
-		else if(filterByArea !== allMarkers[i].area){
+		else if((filterByArea !== allMarkers[i].area) && (filterByDays !== allMarkers[i].openDays)){
 			// Hides markers that don't fit the filtered criteria
 			allMarkers[i].setMap(null);
 		} 
@@ -207,12 +209,19 @@ function clearMarkers(filterByArea){
 
 // Waits for user to select an area to filter by and then calls on the function to filter
 document.getElementById('sortArea').addEventListener('change', filterByArea);
+document.getElementById('sortOpenDays').addEventListener('change', filterByDays);
 
 // Filtering by area
 function filterByArea(){
 	// Takes the selected value that the user has chosen and stores it inside of the variable
 	var selectedArea = document.getElementById('sortArea').value;
 	clearMarkers(selectedArea);
+}
+// Filter by open days
+function filterByDays(){
+	var selectedDays = document.getElementById('sortOpenDays').value;
+	clearMarkers(selectedDays);
+	console.log(selectedDays);
 }
 
 
