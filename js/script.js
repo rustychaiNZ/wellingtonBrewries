@@ -1,10 +1,11 @@
 console.log('Wellington Brewries');
 // Brewries locations
-var brewries = [
+var breweries = [
 	{
 		id : 101,
 		name : 'Panhead',
 		longAndLat : {lat:-41.131073, lng:175.067505},
+		area : 'Upper Hutt',
 		openCard : '<div id="breweryInfo" class="text-primary"><div class="brewery-header"><h2>Panhead Brewery</h2></div><div class="brewery-iWindow-body row"><div class="col-6"><h4>Open Days</h3><ul class="list-open-hours"><li>Tue</li><li>Wed</li><li>Thu</li><li>Fri</li><li>Sat</li><li>Sun</li></ul></div><div class="col-6"><h4>Opening Hours</h3><ul class="list-open-hours"><li>3pm - 9pm</li><li>11am - 9pm</li><li>11am - 9pm</li><li>11am - 9pm</li><li>11am - 9pm</li><li>11am - 9pm</li></ul></div></div></div>',
 		openDays : ['Tue' , 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
 		openHours : ['3pm - 9pm', '11am - 9pm', '11am - 9pm', '11am - 9pm', '11am - 9pm', '11am - 9pm']
@@ -12,6 +13,7 @@ var brewries = [
 	{
 		id : 102,
 		name : 'Boneface',
+		area : 'Upper Hutt',
 		longAndLat : {lat:-41.130121, lng: 175.068525},
 		openCard : '<div id="breweryInfo" class="text-primary"><div class="brewery-header"><h2>Boneface Brewery</h2></div><div class="brewery-iWindow-body row"><div class="col-6"><h4>Open Days</h3><ul class="list-open-hours"><li>Tue</li><li>Wed</li><li>Thu</li><li>Fri</li><li>Sat</li><li>Sun</li></ul></div><div class="col-6"><h4>Opening Hours</h3><ul class="list-open-hours"><li>3pm - 9pm</li><li>11am - 9pm</li><li>11am - 9pm</li><li>11am - 9pm</li><li>11am - 9pm</li><li>11am - 9pm</li></ul></div></div></div>',
 		openDays : ['Tue' , 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
@@ -20,6 +22,7 @@ var brewries = [
 	{
 		id : 103,
 		name : 'Kereru',
+		area : 'Upper Hutt',
 		longAndLat : {lat: -41.129686, lng: 175.072361},
 		openCard : '<div id="breweryInfo" class="text-primary"><div class="brewery-header"><h2>Kereru Brewery</h2></div><div class="brewery-iWindow-body row"><div class="col-6"><h4>Open Days</h3><ul class="list-open-hours"><li>Tue</li><li>Wed</li><li>Thu</li><li>Fri</li><li>Sat</li></ul></div><div class="col-6"><h4>Opening Hours</h3><ul class="list-open-hours"><li>9am - 4pm</li><li>9am - 4pm</li><li>9am - 4pm</li><li>10am - 5pm</li><li>10am - 5pm</li></ul></div></div></div>',
 		openDays : ['Tue' , 'Wed', 'Thu', 'Fri', 'Sat'],
@@ -28,6 +31,7 @@ var brewries = [
 	{
 		id : 104,
 		name : 'Heyday Beer Co',
+		area : 'Wellington CBD',
 		longAndLat : {lat: -41.295940, lng: 174.773553},
 		openCard : '<div id="breweryInfo" class="text-primary"><div class="brewery-header"><h2>Heyday Beer Co Brewery</h2></div><div class="brewery-iWindow-body row"><div class="col-6"><h4>Open Days</h3><ul class="list-open-hours"><li>Mon</li><li>Tue</li><li>Wed</li><li>Thu</li><li>Fri</li><li>Sat</li><li>Sun</li></ul></div><div class="col-6"><h4>Opening Hours</h3><ul class="list-open-hours"><li>3pm - 11pm</li><li>3pm - 11pm</li><li>11am - 10pm</li><li>11am - 10pm</li><li>11am - 12am</li><li>11am - 12am</li><li>11am - 9pm</li></ul></div></div></div>',
 		openDays : ['Mon', 'Tue' , 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
@@ -36,6 +40,7 @@ var brewries = [
 	{
 		id : 105,
 		name : 'Garage Project Cellar Door',
+		area : 'Wellington CBD',
 		longAndLat : {lat: -41.294491, lng: 174.767862},
 		openCard : '<div id="breweryInfo" class="text-primary"><div class="brewery-header"><h2>Garage Project Cellar Door Brewery</h2></div><div class="brewery-iWindow-body row"><div class="col-6"><h4>Open Days</h3><ul class="list-open-hours"><li>Mon</li><li>Tue</li><li>Wed</li><li>Thu</li><li>Fri</li><li>Sat</li><li>Sun</li></ul></div><div class="col-6"><h4>Opening Hours</h3><ul class="list-open-hours"><li>12pm - 7pm</li><li>12pm - 8.30pm</li><li>12pm - 8.30pm</li><li>12pm - 8.30pm</li><li>10am - 9.30pm</li><li>10am - 9.30pm</li><li>12pm - 7pm</li></ul></div></div></div>',
 		openDays : ['Mon', 'Tue' , 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
@@ -44,6 +49,7 @@ var brewries = [
 	{
 		id : 106,
 		name : 'Parrotdog Brewery',
+		area : 'Wellington East',
 		longAndLat : {lat: -41.326756, lng: 174.799773},
 		openCard : '<div id="breweryInfo" class="text-primary"><div class="brewery-header"><h2>Parrotdog Brewery</h2></div><div class="brewery-iWindow-body row"><div class="col-6"><h4>Open Days</h3><ul class="list-open-hours"><li>Wed</li><li>Thu</li><li>Fri</li><li>Sat</li><li>Sun</li></ul></div><div class="col-6"><h4>Opening Hours</h3><ul class="list-open-hours"><li>3pm - 7pm</li><li>1pm - 7pm</li><li>11am - 8pm</li><li>11am - 8pm</li><li>12pm - 6pm</li></ul></div></div></div>',
 		openDays : ['Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
@@ -52,6 +58,7 @@ var brewries = [
 	{
 		id : 107,
 		name : 'Baylands',
+		area : 'Lower Hutt',
 		longAndLat : {lat: -41.225268, lng: 174.873098},
 		openCard : '<div id="breweryInfo" class="text-primary"><div class="brewery-header"><h2>Baylands Brewery</h2></div><div class="brewery-iWindow-body row"><div class="col-6"><h4>Open Days</h3><ul class="list-open-hours"><li>Tue</li><li>Wed</li><li>Thu</li><li>Fri</li><li>Sat</li></ul></div><div class="col-6"><h4>Opening Hours</h3><ul class="list-open-hours"><li>9am - 5.30pm</li><li>9am - 5.30pm</li><li>9am - 5.30pm</li><li>9am - 5.30pm</li><li>11am - 5.30pm</li></ul></div></div></div>',
 		openDays : ['Tue' , 'Wed', 'Thu', 'Fri', 'Sat'],
@@ -60,6 +67,7 @@ var brewries = [
 	{
 		id : 108,
 		name : 'Double Vision Brewing',
+		area : 'Wellington East',
 		longAndLat : {lat: -41.309406, lng: 174.821354},
 		openCard : '<div id="breweryInfo" class="text-primary"><div class="brewery-header"><h2>Double Vision Brewing Brewery</h2></div><div class="brewery-iWindow-body row"><div class="col-6"><h4>Open Days</h3><ul class="list-open-hours"><li>Thu</li><li>Fri</li><li>Sat</li><li>Sun</li></ul></div><div class="col-6"><h4>Opening Hours</h3><ul class="list-open-hours"><li>3pm - 10.30pm</li><li>3pm - 11.30pm</li><li>12pm - 11.30pm</li><li>12pm - 9.00pm</li></ul></div></div></div>',
 		openDays : ['Thu', 'Fri', 'Sat', 'Sun'],
@@ -68,6 +76,7 @@ var brewries = [
 	{
 		id : 109,
 		name : 'Whistling Sisters Beer Co',
+		area : 'Wellington CBD',
 		longAndLat : {lat: -41.294065, lng: 174.777728},
 		openCard : '<div id="breweryInfo" class="text-primary"><div class="brewery-header"><h2>Whistling Sisters Beer Co Brewery</h2></div><div class="brewery-iWindow-body row"><div class="col-6"><h4>Open Days</h3><ul class="list-open-hours"><li>Tue</li><li>Wed</li><li>Thu</li><li>Fri</li><li>Sat</li><li>Sun</li></ul></div><div class="col-6"><h4>Opening Hours</h3><ul class="list-open-hours"><li>3pm - 12am</li><li>3pm - 12.00am</li><li>13pm - 12am</li><li>11:30am – 1am</li><li>10am - 1am</li><li>10am - 12am</li></ul></div></div></div>',
 		openDays : ['Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
@@ -76,6 +85,7 @@ var brewries = [
 	{
 		id : 110,
 		name : 'Fork and Brewer',
+		area : 'Wellington CBD',
 		longAndLat : {lat: -41.289235, lng: 174.775628},
 		openCard : '<div id="breweryInfo" class="text-primary"><div class="brewery-header"><h2>Fork and Brewer Brewery</h2></div><div class="brewery-iWindow-body row"><div class="col-6"><h4>Open Days</h3><ul class="list-open-hours"><li>Mon</li><li>Tue</li><li>Wed</li><li>Thu</li><li>Fri</li><li>Sat</li><li>Sun</li></ul></div><div class="col-6"><h4>Opening Hours</h3><ul class="list-open-hours"><li>11.30am - 11pm</li><li>11.30am - 12am</li><li>11.30am - 12am</li><li>11.30am - 12am</li><li>11.30am - 10pm</li><li>11.30am - 12am</li><li>11.30am - 10pm</li></ul></div></div></div>',
 		openDays : ['Mon', 'Tue' , 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
@@ -131,52 +141,97 @@ function initMap() {
 	breweryMap = new google.maps.Map(document.getElementById('map'), options);
 
 	// Loop through markers
-	for(i=0; i<brewries.length;i++){
+	for(i=0; i<breweries.length;i++){
 		// Adds all of the markers from the brewery array
-		addMarkers(brewries[i]);
+		addMarkers(breweries[i]);
 	}
+}
 
-	// Add marker function
-	function addMarkers(props){
-		// Creates the marker variable
-		var marker = new google.maps.Marker({
-			// Positions the marker to where the brewery is located
-			position: props.longAndLat,
-			// adds the marker to the specific map
-			map: breweryMap,
-			// Gives the map a title
-			title: props.name,
-			// Adds the card to be displayed when an icon is clicked
+// Creating marker object
+var allMarkers = [];
+// Add marker function
+function addMarkers(props){
+	// Creates the marker variable
+	var marker = new google.maps.Marker({
+		// Positions the marker to where the brewery is located
+		position: props.longAndLat,
+		// adds the marker to the specific map
+		map: breweryMap,
+		// Gives the map a title
+		title: props.name,
+		// Adds the card to be displayed when an icon is clicked
+		content: props.openCard,
+		area : props.area
+	});
+	// Pushes all markers to an array
+	allMarkers.push(marker);
+	// Checks to see if there is a card that can be displayed
+	if(props.openCard){
+		var infoWindow = new google.maps.InfoWindow({
+			// Takes card of icon that has been clicked
 			content: props.openCard
 		});
-		// Checks to see if there is a card that can be displayed
-		if(props.openCard){
-			var infoWindow = new google.maps.InfoWindow({
-				// Takes card of icon that has been clicked
-				content: props.openCard
-			});
-			// On click, diplays the selected card
-			marker.addListener('click', function(){
-				// Works out which map and marker was clicked
-				infoWindow.open(map, marker)
-			});
+		// On click, diplays the selected card
+		marker.addListener('click', function(){
+			// Works out which map and marker was clicked
+			infoWindow.open(map, marker)
+		});
+	}
+}
+
+/*
+	-- Filtering functions --
+*/
+
+// Function that calls on the variables created in the filter by area function
+function clearMarkers(filterByArea){
+	// Loops through all of the markers 
+	for(var i=0; i < allMarkers.length; i++){
+		// Allows all of the markers to be displayed if filter is reset
+		if(filterByArea == 'all'){
+			// Reveals all markers on map
+			allMarkers[i].setMap(breweryMap);
+		}
+		// If the filtered area isn't selected, hides the markers in those areas
+		else if(filterByArea !== allMarkers[i].area){
+			// Hides markers that don't fit the filtered criteria
+			allMarkers[i].setMap(null);
+		} 
+		// Updates the map when another filter is selected
+		else{
+			// Reveals all markers on map and then loop resets and hides markers that don't fit the paramaters
+			allMarkers[i].setMap(breweryMap);
 		}
 	}
 }
 
+// Waits for user to select an area to filter by and then calls on the function to filter
+document.getElementById('sortArea').addEventListener('change', filterByArea);
+
+// Filtering by area
+function filterByArea(){
+	// Takes the selected value that the user has chosen and stores it inside of the variable
+	var selectedArea = document.getElementById('sortArea').value;
+	clearMarkers(selectedArea);
+}
+
+
+
+
+
 // Redundant first attempt
 
 	// Works out the location of the marker
-	// var panHeadLocation = {lat: brewries[0].latitude, lng: brewries[0].longtitude};
-	// var BonefaceLocation = {lat: brewries[1].latitude, lng: brewries[1].longtitude};
-	// var kereruLocation = {lat: brewries[2].latitude, lng: brewries[2].longtitude};
-	// var heydayBeerCoLocation = {lat: brewries[3].latitude, lng: brewries[3].longtitude};
-	// var garageProjectLocation = {lat: brewries[4].latitude, lng: brewries[4].longtitude};
-	// var parrotdogLocation = {lat: brewries[5].latitude, lng: brewries[5].longtitude};
-	// var baylandsBreweryLocation = {lat: brewries[6].latitude, lng: brewries[6].longtitude};
-	// var doubleVisionBrewery = {lat: brewries[7].latitude, lng: brewries[7].longtitude};
-	// var whistlingSistersBeerCo = {lat: brewries[8].latitude, lng: brewries[8].longtitude};
-	// var forkAndBrewer = {lat: brewries[9].latitude,  lng: brewries[9].longtitude};
+	// var panHeadLocation = {lat: breweries[0].latitude, lng: breweries[0].longtitude};
+	// var BonefaceLocation = {lat: breweries[1].latitude, lng: breweries[1].longtitude};
+	// var kereruLocation = {lat: breweries[2].latitude, lng: breweries[2].longtitude};
+	// var heydayBeerCoLocation = {lat: breweries[3].latitude, lng: breweries[3].longtitude};
+	// var garageProjectLocation = {lat: breweries[4].latitude, lng: breweries[4].longtitude};
+	// var parrotdogLocation = {lat: breweries[5].latitude, lng: breweries[5].longtitude};
+	// var baylandsBreweryLocation = {lat: breweries[6].latitude, lng: breweries[6].longtitude};
+	// var doubleVisionBrewery = {lat: breweries[7].latitude, lng: breweries[7].longtitude};
+	// var whistlingSistersBeerCo = {lat: breweries[8].latitude, lng: breweries[8].longtitude};
+	// var forkAndBrewer = {lat: breweries[9].latitude,  lng: breweries[9].longtitude};
 	
 	// Prints the markers on the google map
 	
@@ -194,16 +249,16 @@ function initMap() {
 	// var panheadInfo = 
 	// 	'<div id="breweryInfo" class="text-primary">' + 
 	// 		'<div class="brewery-header">' +
-	// 			'<h2>' + brewries[0].name + ' Brewery</h2>' +
+	// 			'<h2>' + breweries[0].name + ' Brewery</h2>' +
 	// 		'</div>' +
 	// 		'<div class="brewery-iWindow-body row">' +
 	// 			'<div class="col-6">' +
 	// 				'<h4>Open Days</h3>' +
-	// 				'<p>' + brewries[0].openDays + '</p>' +
+	// 				'<p>' + breweries[0].openDays + '</p>' +
 	// 			'</div>' + 
 	// 			'<div class="col-6">' +
 	// 				'<h4>Opening Hours</h3>' +
-	// 				'<p>' + brewries[0].openHours + '</p>' +
+	// 				'<p>' + breweries[0].openHours + '</p>' +
 	// 			'</div>'+
 	// 		'</div>' +
 	// 	'</div>';
@@ -212,16 +267,16 @@ function initMap() {
 	// function breweryInfoWindow(){
 	// 	'<div id="breweryInfo" class="text-primary">' + 
 	// 		'<div class="brewery-header">' +
-	// 			'<h2>' + brewries[i].name + ' Brewery</h2>' +
+	// 			'<h2>' + breweries[i].name + ' Brewery</h2>' +
 	// 		'</div>' +
 	// 		'<div class="brewery-iWindow-body row">' +
 	// 			'<div class="col-6">' +
 	// 				'<h4>Open Days</h3>' +
-	// 				'<p>' + brewries[i].openDays + '</p>' +
+	// 				'<p>' + breweries[i].openDays + '</p>' +
 	// 			'</div>' + 
 	// 			'<div class="col-6">' +
 	// 				'<h4>Opening Hours</h3>' +
-	// 				'<p>' + brewries[i].openHours + '</p>' +
+	// 				'<p>' + breweries[i].openHours + '</p>' +
 	// 			'</div>'+
 	// 		'</div>' +
 	// 	'</div>';
@@ -232,7 +287,7 @@ function initMap() {
 	// 	daysOpen: props.daysOpen
 	// });
 	// var markerPH = new google.maps.Marker({
-	// 	title: brewries[0].name, 
+	// 	title: breweries[0].name, 
 	// 	position: panHeadLocation, 
 	// 	map: breweryMap
 	// });

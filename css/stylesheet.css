@@ -40,6 +40,12 @@ h4{
 .btn-map{
 	margin-bottom: 15px;
 }
+
+/* Sort functions styling */
+.brewery-form{
+	margin-bottom: 10px;
+}
+
 /* Maps styling */
 .list-open-hours{
 	padding-left: 10px;

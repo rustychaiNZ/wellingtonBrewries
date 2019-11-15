@@ -17,8 +17,22 @@
 		</div>
 
 		<div class="container bg-light">
-			<button class="btn btn-block btn-primary" id="revealMap">Reveal Map</button>
-			<button class="btn btn-block btn-primary btn-map" id="hideMap">Hide Map</button>
+			<div class="row brewery-form">
+				<div class="col-12"> 
+					<button class="btn btn-block btn-primary" id="revealMap">Reveal Map</button>
+					<button class="btn btn-block btn-primary btn-map" id="hideMap">Hide Map</button>
+				</div>
+				<div class="col-md">
+					<label for="sortArea">Select Area</label>
+					<select class="form-control" id="sortArea">
+						<option value="all">All Breweries</option>
+						<option value="Wellington CBD">Wellington CBD</option>
+						<option value="Wellington East">Eastern Wellington</option>
+						<option value="Lower Hutt">Lower Hutt</option>
+						<option value="Upper Hutt">Upper Hutt</option>
+					</select>
+				</div>
+			</div>
 			<div id="map"></div>
 		</div>
 
