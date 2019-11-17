@@ -225,6 +225,10 @@ function filterByDays(){
 	console.log(selectedDays);
 }
 
+/*
+	* Function to allow the user to sort open days at the breweries
+	* First functions allow the user to clear all of the selected checkboxes and reset the values 
+*/
 // Function to reset the selected open days
 function resetSelectedDays(){
 	document.getElementById('checkMon').checked = false;
@@ -240,6 +244,12 @@ document.getElementById('clearOpenDaysBtn').addEventListener('click', function()
 });
 
 
+// Check box filtering
+var allOpenDayCheckboxes = document.querySelectorAll('input[type=checkbox]');
+var breweryOpenDays = array.from(allMarkers);
+var checked;
+
+console.log(breweryOpenDays);
 
 // Redundant first attempt
 
