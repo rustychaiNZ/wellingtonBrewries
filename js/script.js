@@ -92,9 +92,10 @@ var breweries = [
 		openHours : ['11.30am - 11pm', '11.30am - 12am', '11.30am - 12am', '11.30am - 12am', '11.30am - 10pm', '11.30am - 12am', '11.30am - 10pm'] 
 	}
 ];
+var i;
 
-$('#map').hide();
-$('#hideMap').hide();
+// Hide and show map
+$('#revealMap').hide();
 $('#revealMap').on('click', function(){
 	$('#map').show();
 	$('#hideMap').show();
@@ -186,16 +187,16 @@ function addMarkers(props){
 */
 
 // Function that calls on the variables created in the filter by area function
-function clearMarkers(filterByArea, filterByDays){
+function clearMarkers(filterByArea){
 	// Loops through all of the markers 
 	for(var i=0; i < allMarkers.length; i++){
 		// Allows all of the markers to be displayed if filter is reset
-		if((filterByArea == 'all') && (filterByDays == 'all')){
+		if(filterByArea == 'all'){
 			// Reveals all markers on map
 			allMarkers[i].setMap(breweryMap);
 		}
 		// If the filtered area isn't selected, hides the markers in those areas
-		else if((filterByArea !== allMarkers[i].area) && (filterByDays !== allMarkers[i].openDays)){
+		else if(filterByArea !== allMarkers[i].area){
 			// Hides markers that don't fit the filtered criteria
 			allMarkers[i].setMap(null);
 		} 
@@ -209,7 +210,7 @@ function clearMarkers(filterByArea, filterByDays){
 
 // Waits for user to select an area to filter by and then calls on the function to filter
 document.getElementById('sortArea').addEventListener('change', filterByArea);
-document.getElementById('sortOpenDays').addEventListener('change', filterByDays);
+// document.getElementById('sortOpenDays').addEventListener('change', filterByDays);
 
 // Filtering by area
 function filterByArea(){
@@ -224,7 +225,19 @@ function filterByDays(){
 	console.log(selectedDays);
 }
 
-
+// Function to reset the selected open days
+function resetSelectedDays(){
+	document.getElementById('checkMon').checked = false;
+	document.getElementById('checkTue').checked = false;
+	document.getElementById('checkWed').checked = false;
+	document.getElementById('checkThu').checked = false;
+	document.getElementById('checkFri').checked = false;
+	document.getElementById('checkSat').checked = false;
+	document.getElementById('checkSun').checked = false;
+}
+document.getElementById('clearOpenDaysBtn').addEventListener('click', function(){
+	resetSelectedDays();
+});
 
 
 

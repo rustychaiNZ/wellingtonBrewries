@@ -17,12 +17,14 @@
 		</div>
 
 		<div class="container bg-light">
-			<div class="row brewery-form">
+			<div class="row">
 				<div class="col-12"> 
 					<button class="btn btn-block btn-primary" id="revealMap">Reveal Map</button>
 					<button class="btn btn-block btn-primary btn-map" id="hideMap">Hide Map</button>
 				</div>
-				<div class="col-md">
+			</div>
+			<div class="row align-items-center brewery-form">
+				<div class="col-md-8">
 					<label for="sortArea">Select Area</label>
 					<select class="form-control" id="sortArea">
 						<option value="all">All Breweries</option>
@@ -32,18 +34,37 @@
 						<option value="Upper Hutt">Upper Hutt</option>
 					</select>
 				</div>
-				<div class="col-md">
-					<label for="sortArea">Select Open Days</label>
-					<select class="form-control" id="sortOpenDays">
-						<option value="all">All Breweries</option>
-						<option value="Mon">Monday</option>
-						<option value="Tue">Tuesday</option>
-						<option value="Wed">Wednesday</option>
-						<option value="Thu">Thursday</option>
-						<option value="Fri">Friday</option>
-						<option value="Sat">Saturday</option>
-						<option value="Sun">Sunday</option>
-					</select>
+				<div class="col-md-4">
+					<h3>Select Open Days</h3>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" value="Mon" id="checkMon">
+						<label class="form-check-label" for="Mon">Monday</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" value="Tue" id="checkTue">
+						<label class="form-check-label" for="Tue">Tuesda</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" value="Wed" id="checkWed">
+						<label class="form-check-label" for="Wed">Wednesday</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" value="Thu" id="checkThu">
+						<label class="form-check-label" for="Thu">Thursday</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" value="Fri" id="checkFri">
+						<label class="form-check-label" for="Fri">Friday</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" value="Sat" id="checkSat">
+						<label class="form-check-label" for="Sat">Saturday</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" value="Sun" id="checkSun">
+						<label class="form-check-label" for="Sun">Sunday</label>
+					</div>
+					<button class="btn btn-sm btn-primary" id="clearOpenDaysBtn">Clear Selected Days</button>
 				</div>
 			</div>
 			<div id="map"></div>
