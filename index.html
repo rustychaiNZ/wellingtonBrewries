@@ -8,6 +8,11 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link rel="stylesheet" href="css/stylesheet.css">
 
+		<!-- jQuery UI  -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha256-rByPlHULObEjJ6XQxW/flG2r+22R5dKiAoef+aXWfik=" crossorigin="anonymous"/>
+		<!-- My Style Sheet -->
+  		<link rel="stylesheet" href="css/stylesheet.css">
+
 		<title>Wellington Breweries</title>
 	</head>
 	<body>
@@ -23,7 +28,7 @@
 					<button class="btn btn-block btn-primary btn-map" id="hideMap">Hide Map</button>
 				</div>
 			</div>
-			<div class="row align-items-center brewery-form">
+			<div class="row brewery-form">
 				<div class="col-md-8">
 					<label for="sortArea">Select Area</label>
 					<select class="form-control" id="sortArea">
@@ -37,45 +42,66 @@
 				<div class="col-md-4">
 					<h3>Select Open Days</h3>
 					<div class="form-check">
-						<input class="form-check-input" type="checkbox" value="Mon" id="checkMon">
+						<input class="form-check-input" type="checkbox" value="Mon" name="daysOpen" id="checkMon">
 						<label class="form-check-label" for="Mon">Monday</label>
 					</div>
 					<div class="form-check">
-						<input class="form-check-input" type="checkbox" value="Tue" id="checkTue">
+						<input class="form-check-input" type="checkbox" value="Tue" name="daysOpen" id="checkTue">
 						<label class="form-check-label" for="Tue">Tuesda</label>
 					</div>
 					<div class="form-check">
-						<input class="form-check-input" type="checkbox" value="Wed" id="checkWed">
+						<input class="form-check-input" type="checkbox" value="Wed" name="daysOpen" id="checkWed">
 						<label class="form-check-label" for="Wed">Wednesday</label>
 					</div>
 					<div class="form-check">
-						<input class="form-check-input" type="checkbox" value="Thu" id="checkThu">
+						<input class="form-check-input" type="checkbox" value="Thu" name="daysOpen" id="checkThu">
 						<label class="form-check-label" for="Thu">Thursday</label>
 					</div>
 					<div class="form-check">
-						<input class="form-check-input" type="checkbox" value="Fri" id="checkFri">
+						<input class="form-check-input" type="checkbox" value="Fri" name="daysOpen" id="checkFri">
 						<label class="form-check-label" for="Fri">Friday</label>
 					</div>
 					<div class="form-check">
-						<input class="form-check-input" type="checkbox" value="Sat" id="checkSat">
+						<input class="form-check-input" type="checkbox" value="Sat" name="daysOpen" id="checkSat">
 						<label class="form-check-label" for="Sat">Saturday</label>
 					</div>
 					<div class="form-check">
-						<input class="form-check-input" type="checkbox" value="Sun" id="checkSun">
+						<input class="form-check-input" type="checkbox" value="Sun" name="daysOpen" id="checkSun">
 						<label class="form-check-label" for="Sun">Sunday</label>
 					</div>
 					<button class="btn btn-sm btn-primary" id="clearOpenDaysBtn">Clear Selected Days</button>
 				</div>
 			</div>
+			<div class="row align-items-center brewery-form">
+				<div class="col-md">
+					<label for="startDatePicker">Start Date:</label>
+					<input type="text" id="startDatePicker">
+				</div>
+				<div class="col-md">
+					<label for="endDatePicker">End Date:</label>
+					<input type="text" id="endDatePicker">
+				</div>
+				<div class="col-md">
+					<button class="btn btn-lg btn-primary" id="calcDate">Submit</button>
+				</div>
+			</div>
+			<div class="row brewery-form justify-content-center">
+				<div class="col-md">
+					<label for="" id="noOfDays" class="form-control"></label>
+				</div>
+			</div>
 			<div id="map"></div>
 		</div>
-
+		
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 		<!-- google maps api key for yoobee -->
 		<!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=apiKey&callback=initMap"></script> -->
+
+		<!-- jQuery UI Script -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha256-KM512VNnjElC30ehFwehXjx1YCHPiQkOPmqnrWtpccM=" crossorigin="anonymous"></script>
 		<!-- Config file -->
 		<script src="js/config.json"></script>
 		<!-- Custom script files -->

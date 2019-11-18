@@ -165,7 +165,6 @@ function addMarkers(props){
 		area : props.area,
 		openDays: [props.openDays]
 	});
-	console.log(marker.openDays);
 	// Pushes all markers to an array
 	allMarkers.push(marker);
 	// Checks to see if there is a card that can be displayed
@@ -243,13 +242,58 @@ document.getElementById('clearOpenDaysBtn').addEventListener('click', function()
 	resetSelectedDays();
 });
 
-
 // Check box filtering
-var allOpenDayCheckboxes = document.querySelectorAll('input[type=checkbox]');
-var breweryOpenDays = array.from(allMarkers);
-var checked;
 
-console.log(breweryOpenDays);
+/* 
+	* Date Calculation
+ */
+
+// Date Picker start
+$('#startDatePicker').datepicker({
+	// Sets the format of the date in the date selector
+	dateFormat : 'dd/mm/yy',
+	// Allows the user to be able to select a new month
+	changeMonth : true,
+	// Restricts the user to only be able to pick from the current date and future dates
+	minDate : new Date(),
+	// Allows the user to be able to select a date up to a year from the current date today
+	maxDate : '+1y',
+	onSelect : function(date){
+		var selectDate = new Date(date);
+		// Number of miliseconds in a day 
+		var mSecsInADay = 86400000; 
+
+		// considering of the day when the site is used
+		var stDate = new Date(selectDate.getTime() + mSecsInADay);
+
+		// set minimum date of endDatePicker after selecting start date
+		$('#endDatePicker').datepicker('option', 'minDate', stDate);
+		var enDate = new Date(selectDate.getTime() + 15 * mSecsInADay);
+
+		$('#endDatePicker').datepicker('option', 'maxDate', enDate);
+	}
+});
+
+// Date Picker end
+$('#endDatePicker').datepicker({
+	dateFormat : 'dd/mm/yyyy',
+	changeMonth : true, 
+});
+
+function dateDifference(){
+	var start = $(startDatePicker).datepicker('getDate');
+	var end = $(endDate).datepicker('getDate');
+	// convert milliseconds to seconds, then to minuetes, then to hours and then finally days
+	var days = (end - start)/1000/60/60/24; 
+}
+
+$('#calcDate').click(function(){
+	dateDifference();
+});
+
+
+
+
 
 // Redundant first attempt
 
