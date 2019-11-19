@@ -136,10 +136,314 @@ function initMap() {
 	// Sets the options for the brewery map
 	var options = {
 		zoom: 11,
-		center: {lat:-41.241098 ,lng:174.824240}
+		center: {lat:-41.241098 ,lng:174.824240},
+		mapTypeId : 'roadmap',
+		styles : [
+			// {
+			//  featureType : 'water',
+			//  stylers : [
+			//      {
+			//          color : '#abcdef'
+			//      }
+			//  ]
+			// },
+			// {
+			//  featureType : 'road',
+			//  elementType : 'geometry',
+			//  stylers : [
+			//      {
+			//          lightness : '-40',
+			//          color : '#333'
+			//      }
+			//  ]
+			// },
+			// {
+			//  featureType : 'road',
+			//  elementType : 'labels.text.fill',
+			//  stylers : [
+			//      {
+			//          color : '#34495e'
+			//      }
+			//  ]
+			// },
+			// {
+			//  featureType : 'landscape',
+			//  stylers : [
+			//      {
+			//          color : '#2ecc71'
+			//      }
+			//  ]
+			// }
+			// Style taken from 'https://mapstyle.withgoogle.com/'
+			{
+			"elementType": "geometry",
+			"stylers": [
+				{
+				"color": "#ebe3cd"
+				}
+			]
+			},
+			{
+			"elementType": "labels.text.fill",
+			"stylers": [
+				{
+				"color": "#523735"
+				}
+			]
+			},
+			{
+			"elementType": "labels.text.stroke",
+			"stylers": [
+				{
+				"color": "#f5f1e6"
+				}
+			]
+			},
+			{
+			"featureType": "administrative",
+			"elementType": "geometry.stroke",
+			"stylers": [
+				{
+				"color": "#c9b2a6"
+				}
+			]
+			},
+			{
+			"featureType": "administrative.land_parcel",
+			"elementType": "geometry.stroke",
+			"stylers": [
+				{
+				"color": "#dcd2be"
+				}
+			]
+			},
+			{
+			"featureType": "administrative.land_parcel",
+			"elementType": "labels",
+			"stylers": [
+				{
+				"visibility": "off"
+				}
+			]
+			},
+			{
+			"featureType": "administrative.land_parcel",
+			"elementType": "labels.text.fill",
+			"stylers": [
+				{
+				"color": "#ae9e90"
+				}
+			]
+			},
+			{
+			"featureType": "landscape.natural",
+			"elementType": "geometry",
+			"stylers": [
+				{
+				"color": "#dfd2ae"
+				}
+			]
+			},
+			{
+			"featureType": "poi",
+			"elementType": "geometry",
+			"stylers": [
+				{
+				"color": "#dfd2ae"
+				}
+			]
+			},
+			{
+			"featureType": "poi",
+			"elementType": "labels.text",
+			"stylers": [
+				{
+				"visibility": "off"
+				}
+			]
+			},
+			{
+			"featureType": "poi",
+			"elementType": "labels.text.fill",
+			"stylers": [
+				{
+				"color": "#93817c"
+				}
+			]
+			},
+			{
+			"featureType": "poi.business",
+			"stylers": [
+				{
+				"visibility": "off"
+				}
+			]
+			},
+			{
+			"featureType": "poi.park",
+			"elementType": "geometry.fill",
+			"stylers": [
+				{
+				"color": "#a5b076"
+				}
+			]
+			},
+			{
+			"featureType": "poi.park",
+			"elementType": "labels.text.fill",
+			"stylers": [
+				{
+				"color": "#447530"
+				}
+			]
+			},
+			{
+			"featureType": "road",
+			"elementType": "geometry",
+			"stylers": [
+				{
+				"color": "#f5f1e6"
+				}
+			]
+			},
+			{
+			"featureType": "road",
+			"elementType": "labels.icon",
+			"stylers": [
+				{
+				"visibility": "off"
+				}
+			]
+			},
+			{
+			"featureType": "road.arterial",
+			"elementType": "geometry",
+			"stylers": [
+				{
+				"color": "#fdfcf8"
+				}
+			]
+			},
+			{
+			"featureType": "road.highway",
+			"elementType": "geometry",
+			"stylers": [
+				{
+				"color": "#f8c967"
+				}
+			]
+			},
+			{
+			"featureType": "road.highway",
+			"elementType": "geometry.stroke",
+			"stylers": [
+				{
+				"color": "#e9bc62"
+				}
+			]
+			},
+			{
+			"featureType": "road.highway.controlled_access",
+			"elementType": "geometry",
+			"stylers": [
+				{
+				"color": "#e98d58"
+				}
+			]
+			},
+			{
+			"featureType": "road.highway.controlled_access",
+			"elementType": "geometry.stroke",
+			"stylers": [
+				{
+				"color": "#db8555"
+				}
+			]
+			},
+			{
+			"featureType": "road.local",
+			"elementType": "labels",
+			"stylers": [
+				{
+				"visibility": "off"
+				}
+			]
+			},
+			{
+			"featureType": "road.local",
+			"elementType": "labels.text.fill",
+			"stylers": [
+				{
+				"color": "#806b63"
+				}
+			]
+			},
+			{
+			"featureType": "transit",
+			"stylers": [
+				{
+				"visibility": "off"
+				}
+			]
+			},
+			{
+			"featureType": "transit.line",
+			"elementType": "geometry",
+			"stylers": [
+				{
+				"color": "#dfd2ae"
+				}
+			]
+			},
+			{
+			"featureType": "transit.line",
+			"elementType": "labels.text.fill",
+			"stylers": [
+				{
+				"color": "#8f7d77"
+				}
+			]
+			},
+			{
+			"featureType": "transit.line",
+			"elementType": "labels.text.stroke",
+			"stylers": [
+				{
+				"color": "#ebe3cd"
+				}
+			]
+			},
+			{
+			"featureType": "transit.station",
+			"elementType": "geometry",
+			"stylers": [
+				{
+				"color": "#dfd2ae"
+				}
+			]
+			},
+			{
+			"featureType": "water",
+			"elementType": "geometry.fill",
+			"stylers": [
+				{
+				"color": "#b9d3c2"
+				}
+			]
+			},
+			{
+			"featureType": "water",
+			"elementType": "labels.text.fill",
+			"stylers": [
+				{
+				"color": "#92998d"
+				}
+			]}
+		]
 	}
 	// Initialises the google map so that it displays on the web page
 	breweryMap = new google.maps.Map(document.getElementById('map'), options);
+	breweryMap.setTilt(0);
 
 	// Loop through markers
 	for(i=0; i<breweries.length;i++){
@@ -150,20 +454,26 @@ function initMap() {
 
 // Creating marker object
 var allMarkers = [];
+// Icon to represent breweries
+var breweryIcon = {
+	url : 'http://maps.google.com/mapfiles/kml/shapes/bars.png',
+	// size : new google.maps.Size(32,32)
+};
 // Add marker function
 function addMarkers(props){
 	// Creates the marker variable
 	var marker = new google.maps.Marker({
 		// Positions the marker to where the brewery is located
-		position: props.longAndLat,
+		position : props.longAndLat,
 		// adds the marker to the specific map
-		map: breweryMap,
+		map : breweryMap,
 		// Gives the map a title
-		title: props.name,
+		title : props.name,
 		// Adds the card to be displayed when an icon is clicked
-		content: props.openCard,
+		content : props.openCard,
 		area : props.area,
-		openDays: [props.openDays]
+		openDays : [props.openDays],
+		icon : breweryIcon
 	});
 	// Pushes all markers to an array
 	allMarkers.push(marker);
@@ -245,7 +555,9 @@ document.getElementById('clearOpenDaysBtn').addEventListener('click', function()
 // Check box filtering
 
 /* 
-	* Date Calculation
+	* Takes user input for start date
+	* Takes user input for end date
+	* Date Calculation of how many days
  */
 
 // Date Picker start
@@ -276,19 +588,27 @@ $('#startDatePicker').datepicker({
 
 // Date Picker end
 $('#endDatePicker').datepicker({
-	dateFormat : 'dd/mm/yyyy',
+	dateFormat : 'dd/mm/yy',
 	changeMonth : true, 
 });
 
 function dateDifference(){
 	var start = $(startDatePicker).datepicker('getDate');
-	var end = $(endDate).datepicker('getDate');
+	var end = $(endDatePicker).datepicker('getDate');
 	// convert milliseconds to seconds, then to minuetes, then to hours and then finally days
 	var days = (end - start)/1000/60/60/24; 
+	// Prints the output to the label on the page
+	document.getElementById('noOfDays').innerHTML = days;
+
+	return;
 }
 
+// Calls the datedifference function to work out how many days away the user has entered
 $('#calcDate').click(function(){
+	// Does the calculation of the start and end date
 	dateDifference();
+	console.log('this is working');
+
 });
 
 
@@ -323,52 +643,52 @@ $('#calcDate').click(function(){
 
 	// Creates info window for user to be able to read more info about the breweries
 	// var panheadInfo = 
-	// 	'<div id="breweryInfo" class="text-primary">' + 
-	// 		'<div class="brewery-header">' +
-	// 			'<h2>' + breweries[0].name + ' Brewery</h2>' +
-	// 		'</div>' +
-	// 		'<div class="brewery-iWindow-body row">' +
-	// 			'<div class="col-6">' +
-	// 				'<h4>Open Days</h3>' +
-	// 				'<p>' + breweries[0].openDays + '</p>' +
-	// 			'</div>' + 
-	// 			'<div class="col-6">' +
-	// 				'<h4>Opening Hours</h3>' +
-	// 				'<p>' + breweries[0].openHours + '</p>' +
-	// 			'</div>'+
-	// 		'</div>' +
-	// 	'</div>';
+	//  '<div id="breweryInfo" class="text-primary">' + 
+	//      '<div class="brewery-header">' +
+	//          '<h2>' + breweries[0].name + ' Brewery</h2>' +
+	//      '</div>' +
+	//      '<div class="brewery-iWindow-body row">' +
+	//          '<div class="col-6">' +
+	//              '<h4>Open Days</h3>' +
+	//              '<p>' + breweries[0].openDays + '</p>' +
+	//          '</div>' + 
+	//          '<div class="col-6">' +
+	//              '<h4>Opening Hours</h3>' +
+	//              '<p>' + breweries[0].openHours + '</p>' +
+	//          '</div>'+
+	//      '</div>' +
+	//  '</div>';
 
 	// // For loop
 	// function breweryInfoWindow(){
-	// 	'<div id="breweryInfo" class="text-primary">' + 
-	// 		'<div class="brewery-header">' +
-	// 			'<h2>' + breweries[i].name + ' Brewery</h2>' +
-	// 		'</div>' +
-	// 		'<div class="brewery-iWindow-body row">' +
-	// 			'<div class="col-6">' +
-	// 				'<h4>Open Days</h3>' +
-	// 				'<p>' + breweries[i].openDays + '</p>' +
-	// 			'</div>' + 
-	// 			'<div class="col-6">' +
-	// 				'<h4>Opening Hours</h3>' +
-	// 				'<p>' + breweries[i].openHours + '</p>' +
-	// 			'</div>'+
-	// 		'</div>' +
-	// 	'</div>';
+	//  '<div id="breweryInfo" class="text-primary">' + 
+	//      '<div class="brewery-header">' +
+	//          '<h2>' + breweries[i].name + ' Brewery</h2>' +
+	//      '</div>' +
+	//      '<div class="brewery-iWindow-body row">' +
+	//          '<div class="col-6">' +
+	//              '<h4>Open Days</h3>' +
+	//              '<p>' + breweries[i].openDays + '</p>' +
+	//          '</div>' + 
+	//          '<div class="col-6">' +
+	//              '<h4>Opening Hours</h3>' +
+	//              '<p>' + breweries[i].openHours + '</p>' +
+	//          '</div>'+
+	//      '</div>' +
+	//  '</div>';
 	// }
 
 	// Matches the info for window to the google api
 	// var infoWindow = new google.maps.InfoWindow({
-	// 	daysOpen: props.daysOpen
+	//  daysOpen: props.daysOpen
 	// });
 	// var markerPH = new google.maps.Marker({
-	// 	title: breweries[0].name, 
-	// 	position: panHeadLocation, 
-	// 	map: breweryMap
+	//  title: breweries[0].name, 
+	//  position: panHeadLocation, 
+	//  map: breweryMap
 	// });
 	// marker.addListener('click', function(){
-	// 	infoWindow.open(map, daysOpen);
+	//  infoWindow.open(map, daysOpen);
 	// });
 
 
